@@ -7370,6 +7370,16 @@ width = 200;
 );
 }
 );
+instances = (
+{
+instanceInterpolations = {
+m01 = 1;
+};
+name = "Bold-Condensed";
+weightClass = 700;
+widthClass = 3;
+}
+);
 metrics = (
 {
 type = ascender;
