@@ -41,9 +41,21 @@ GSOffsetVertical = -15;
 glyphs = (
 {
 glyphname = A;
-lastChange = "2025-02-16 21:23:13 +0000";
+lastChange = "2025-04-13 18:19:46 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (192,134);
+text = "could do y=140 or 150 vs 145";
+type = Text;
+},
+{
+pos = (49,-19);
+text = "width of these is 140->130 instead of 150. imo looks best this way or 145.";
+type = Text;
+}
+);
 background = {
 shapes = (
 {
@@ -121,23 +133,9 @@ unicode = 65;
 },
 {
 glyphname = B;
-lastChange = "2025-04-04 21:41:50 +0000";
+lastChange = "2025-04-14 04:43:03 +0000";
 layers = (
 {
-anchors = (
-{
-name = bottom;
-pos = (223,0);
-},
-{
-name = center;
-pos = (73,175);
-},
-{
-name = top;
-pos = (223,700);
-}
-);
 background = {
 hints = (
 {
@@ -518,7 +516,7 @@ unicode = 67;
 },
 {
 glyphname = D;
-lastChange = "2025-03-23 23:55:14 +0000";
+lastChange = "2025-04-13 18:15:00 +0000";
 layers = (
 {
 backgroundImage = {
@@ -585,7 +583,7 @@ unicode = 68;
 },
 {
 glyphname = E;
-lastChange = "2025-03-23 23:55:34 +0000";
+lastChange = "2025-04-13 23:59:52 +0000";
 layers = (
 {
 background = {
@@ -683,7 +681,7 @@ unicode = 69;
 },
 {
 glyphname = F;
-lastChange = "2025-02-13 20:29:10 +0000";
+lastChange = "2025-04-14 00:02:01 +0000";
 layers = (
 {
 backgroundImage = {
@@ -731,7 +729,7 @@ unicode = 70;
 },
 {
 glyphname = G;
-lastChange = "2025-03-01 22:50:51 +0000";
+lastChange = "2025-04-13 18:23:23 +0000";
 layers = (
 {
 backgroundImage = {
@@ -822,9 +820,47 @@ unicode = 71;
 },
 {
 glyphname = H;
-lastChange = "2025-02-16 21:26:52 +0000";
+lastChange = "2025-04-14 00:00:47 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (162,-60);
+text = "moved bar in to align, like E, F";
+type = Text;
+}
+);
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(25,0,l),
+(175,0,l),
+(175,700,l),
+(25,700,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(170,295,l),
+(280,295,l),
+(280,405,l),
+(170,405,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(275,0,l),
+(425,0,l),
+(425,700,l),
+(275,700,l)
+);
+}
+);
+};
 backgroundImage = {
 crop = (240.732,283.902,146.341,243.902);
 imagePath = "png/FGHIJ.png";
@@ -846,10 +882,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
-(170,295,l),
-(280,295,l),
-(280,405,l),
-(170,405,l)
+(175,295,l),
+(275,295,l),
+(275,405,l),
+(175,405,l)
 );
 },
 {
@@ -1018,7 +1054,7 @@ unicode = 74;
 },
 {
 glyphname = K;
-lastChange = "2025-03-29 22:16:55 +0000";
+lastChange = "2025-04-14 04:44:18 +0000";
 layers = (
 {
 background = {
@@ -1097,9 +1133,16 @@ unicode = 75;
 },
 {
 glyphname = L;
-lastChange = "2025-02-16 21:32:32 +0000";
+lastChange = "2025-04-14 00:01:46 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (108,-81);
+text = "the spacing on right =O, (same as E, F) but could be O*.75). look at HELLO   ";
+type = Text;
+}
+);
 background = {
 shapes = (
 {
@@ -1159,12 +1202,66 @@ unicode = 76;
 },
 {
 glyphname = M;
-lastChange = "2025-02-28 21:59:39 +0000";
+lastChange = "2025-04-14 00:59:25 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (227.344,-74.226);
+text = "suggestion to expand M slightly, rationalizing gaps and bringing it closer to references";
+type = Text;
+width = 158;
+},
+{
+pos = (234,-155);
+text = "after review, not sure I like expanded more.... but leave in for you to decide";
+type = Text;
+width = 140;
+}
+);
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(35,0,l),
+(185,0,l),
+(185,700,l),
+(35,700,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(370,0,l),
+(255,700,l),
+(145,700,l),
+(260,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(445,700,l),
+(445,0,l),
+(595,0,l),
+(595,700,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(485,700,l),
+(375,700,l),
+(260,0,l),
+(370,0,l)
+);
+}
+);
+};
 backgroundImage = {
 imagePath = "png/KLMN.png";
-pos = (-1184,-1449);
+pos = (-1174,-1449);
 scale = (4.4,4.4);
 };
 layerId = m01;
@@ -1181,32 +1278,32 @@ nodes = (
 {
 closed = 1;
 nodes = (
-(360,0,l),
+(375,0,l),
 (245,700,l),
-(135,700,l),
-(250,0,l)
+(130,700,l),
+(255,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(435,700,l),
-(435,0,l),
-(585,0,l),
-(585,700,l)
+(455,700,l),
+(455,0,l),
+(605,0,l),
+(605,700,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(475,700,l),
-(365,700,l),
-(250,0,l),
-(360,0,l)
+(500,700,l),
+(385,700,l),
+(255,0,l),
+(375,0,l)
 );
 }
 );
-width = 610;
+width = 630;
 }
 );
 metricLeft = H;
@@ -1216,7 +1313,7 @@ unicode = 77;
 },
 {
 glyphname = N;
-lastChange = "2025-02-28 21:51:45 +0000";
+lastChange = "2025-04-13 22:44:18 +0000";
 layers = (
 {
 backgroundImage = {
@@ -1348,7 +1445,7 @@ unicode = 79;
 },
 {
 glyphname = P;
-lastChange = "2025-03-23 23:57:50 +0000";
+lastChange = "2025-04-13 23:43:02 +0000";
 layers = (
 {
 backgroundImage = {
@@ -1416,9 +1513,16 @@ unicode = 80;
 },
 {
 glyphname = Q;
-lastChange = "2025-02-13 20:29:10 +0000";
+lastChange = "2025-04-13 23:47:00 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (334,-50);
+text = "not an exact bisection of curve (too low, compare distances)";
+type = Text;
+}
+);
 background = {
 hints = (
 {
@@ -1764,9 +1868,27 @@ unicode = 82;
 },
 {
 glyphname = S;
-lastChange = "2025-02-13 20:29:10 +0000";
+lastChange = "2025-04-14 01:55:19 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (167,-52);
+text = "right curves were 108 and left curves 100. believe symmetry should be diagonal or bottom heavy";
+type = Text;
+width = 158;
+},
+{
+pos = (471,390);
+text = "this anchor is high (intentionally)";
+type = Text;
+},
+{
+pos = (287,274);
+text = "pixel corrected";
+type = Text;
+}
+);
 background = {
 hints = (
 {
@@ -1968,13 +2090,80 @@ type = Corner;
 name = _corner.ROUND;
 scale = (1.08,1.08);
 type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,2);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,3);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,6);
+scale = (1.08,1.08);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,7);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,12);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,13);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,16);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,17);
+scale = (1.08,1.08);
+type = Corner;
 }
 );
 shapes = (
 {
-closed = 0;
+closed = 1;
 nodes = (
-(270,185,l)
+(169,419,o),
+(170,515,c),
+(170,590,l),
+(270,590,l),
+(270,485,l),
+(420,485,l),
+(420,700,l),
+(20,700,l),
+(20,495,l),
+(20,321,o),
+(271,295,o),
+(270,185,c),
+(270,110,l),
+(170,110,l),
+(170,215,l),
+(20,215,l),
+(20,0,l),
+(420,0,l),
+(420,205,l),
+(420,386,o)
 );
 }
 );
@@ -1996,6 +2185,7 @@ type = Corner;
 {
 name = _corner.ROUND;
 origin = (0,7);
+scale = (1.08,1.08);
 type = Corner;
 },
 {
@@ -2027,7 +2217,6 @@ type = Corner;
 {
 name = _corner.ROUND;
 origin = (0,17);
-scale = (1.08,1.08);
 type = Corner;
 },
 {
@@ -2051,7 +2240,7 @@ nodes = (
 (20,700,l),
 (20,495,l),
 (20,321,o),
-(271,295,o),
+(270,295,o),
 (270,185,c),
 (270,110,l),
 (170,110,l),
@@ -2073,7 +2262,7 @@ unicode = 83;
 },
 {
 glyphname = T;
-lastChange = "2025-02-16 21:11:55 +0000";
+lastChange = "2025-04-10 18:26:13 +0000";
 layers = (
 {
 background = {
@@ -2210,9 +2399,17 @@ unicode = 85;
 },
 {
 glyphname = V;
-lastChange = "2025-02-13 20:29:10 +0000";
+lastChange = "2025-04-14 00:09:59 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (185,-61);
+text = "width of strokes 150. personally, think it can handle it";
+type = Text;
+width = 122;
+}
+);
 background = {
 shapes = (
 {
@@ -2247,19 +2444,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(264,0,l),
-(150,700,l),
+(265,0,l),
+(160,700,l),
 (10,700,l),
-(134,0,l)
+(135,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
 (460,700,l),
-(320,700,l),
-(206,0,l),
-(336,0,l)
+(310,700,l),
+(205,0,l),
+(335,0,l)
 );
 }
 );
@@ -2272,161 +2469,60 @@ unicode = 86;
 },
 {
 glyphname = W;
-lastChange = "2025-02-16 22:17:13 +0000";
+lastChange = "2025-04-14 01:53:18 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (271,-76);
+text = "construct as lowercase is, using V. rationalizing gaps and angles. bringing tips of insets in line with references (slightly above V). some significant changes, so try swapping with original background to see your preference.";
+type = Text;
+width = 230;
+}
+);
 background = {
 shapes = (
 {
 closed = 1;
 nodes = (
-(274,0,l),
-(160,700,l),
-(10,700,l),
-(134,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(460,700,l),
-(320,700,l),
-(196,0,l),
-(336,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(584,0,l),
-(460,700,l),
-(320,700,l),
-(444,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(770,700,l),
-(630,700,l),
-(506,0,l),
-(646,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(264,0,l),
+(265,0,l),
 (150,700,l),
-(10,700,l),
-(134,0,l)
+(0,700,l),
+(124,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(460,700,l),
-(320,700,l),
-(206,0,l),
-(336,0,l)
+(455,700,l),
+(305,700,l),
+(186,0,l),
+(326,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(574,0,l),
-(460,700,l),
-(320,700,l),
-(444,0,l)
+(572,0,l),
+(455,700,l),
+(305,700,l),
+(434,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(770,700,l),
-(630,700,l),
-(516,0,l),
-(646,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(264,0,l),
-(150,700,l),
-(10,700,l),
-(134,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(460,700,l),
-(320,700,l),
-(206,0,l),
-(336,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(574,0,l),
-(460,700,l),
-(320,700,l),
-(444,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(770,700,l),
-(630,700,l),
-(516,0,l),
-(646,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(264,0,l),
-(150,700,l),
-(10,700,l),
-(134,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(460,700,l),
-(320,700,l),
-(206,0,l),
-(336,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(574,0,l),
-(460,700,l),
-(320,700,l),
-(444,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(770,700,l),
-(630,700,l),
-(516,0,l),
-(646,0,l)
+(760,700,l),
+(610,700,l),
+(496,0,l),
+(636,0,l)
 );
 }
 );
 };
 backgroundImage = {
-crop = (407.229,275.181,144.578,240.964);
 imagePath = "png/TUVW.png";
-pos = (-1600,-1342);
+pos = (-1610,-1342);
 scale = (4.15,4.15);
 };
 layerId = m01;
@@ -2434,41 +2530,41 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(264,0,l),
-(150,700,l),
+(275,0,l),
+(160,700,l),
 (10,700,l),
-(134,0,l)
+(135,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(460,700,l),
-(320,700,l),
-(206,0,l),
-(336,0,l)
+(450,700,l),
+(310,700,l),
+(190,0,l),
+(330,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(574,0,l),
-(460,700,l),
-(320,700,l),
-(444,0,l)
+(570,0,l),
+(450,700,l),
+(310,700,l),
+(430,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(770,700,l),
-(630,700,l),
-(516,0,l),
-(646,0,l)
+(750,700,l),
+(600,700,l),
+(485,0,l),
+(625,0,l)
 );
 }
 );
-width = 780;
+width = 760;
 }
 );
 metricLeft = "=O*.5";
@@ -2477,9 +2573,17 @@ unicode = 87;
 },
 {
 glyphname = X;
-lastChange = "2025-02-16 22:11:11 +0000";
+lastChange = "2025-04-14 00:09:33 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (120,-67);
+text = "other strokes taper when intersecting, can mimic this on X by uniting and moving intersections slightly in. less rational, but more in line with other letters. compare by swapping background";
+type = Text;
+width = 203;
+}
+);
 background = {
 shapes = (
 {
@@ -2514,18 +2618,17 @@ shapes = (
 closed = 1;
 nodes = (
 (410,0,l),
-(150,700,l),
-(10,700,l),
-(270,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
+(280,350,l),
 (410,700,l),
 (270,700,l),
+(210,525,l),
+(150,700,l),
+(10,700,l),
+(140,350,l),
 (10,0,l),
-(150,0,l)
+(150,0,l),
+(210,175,l),
+(270,0,l)
 );
 }
 );
@@ -2538,9 +2641,33 @@ unicode = 88;
 },
 {
 glyphname = Y;
-lastChange = "2025-02-28 22:07:27 +0000";
+lastChange = "2025-04-14 00:10:53 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (77,143);
+text = "off by 2";
+type = Text;
+},
+{
+pos = (341,162);
+text = "off by 2";
+type = Text;
+},
+{
+pos = (171,-27);
+text = "thinned bottom of strokes to 120 to rationalize and drop lighten middle";
+type = Text;
+width = 143;
+},
+{
+pos = (175.824,755.599);
+text = "width of tops remains 140, uniquely";
+type = Text;
+width = 154;
+}
+);
 background = {
 shapes = (
 {
@@ -2583,8 +2710,8 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(167,0,l),
-(307,0,l),
+(165,0,l),
+(305,0,l),
 (305,230,l),
 (165,230,l)
 );
@@ -2592,7 +2719,7 @@ nodes = (
 {
 closed = 1;
 nodes = (
-(294,230,l),
+(285,230,l),
 (150,700,l),
 (10,700,l),
 (165,230,l)
@@ -2601,14 +2728,14 @@ nodes = (
 {
 closed = 1;
 nodes = (
-(461,700,l),
-(321,700,l),
-(177,230,l),
+(460,700,l),
+(320,700,l),
+(185,230,l),
 (305,230,l)
 );
 }
 );
-width = 471;
+width = 470;
 }
 );
 metricLeft = "=O*.5";
@@ -2617,9 +2744,16 @@ unicode = 89;
 },
 {
 glyphname = Z;
-lastChange = "2025-04-04 21:15:46 +0000";
+lastChange = "2025-04-10 18:27:56 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (357,-35);
+text = "off by 1, 384 vs 385";
+type = Text;
+}
+);
 background = {
 shapes = (
 {
@@ -2654,8 +2788,8 @@ nodes = (
 closed = 1;
 nodes = (
 (15,0,l),
-(384,0,l),
-(384,130,l),
+(385,0,l),
+(385,130,l),
 (15,130,l)
 );
 }
@@ -2669,41 +2803,31 @@ unicode = 90;
 },
 {
 glyphname = a;
-lastChange = "2025-04-04 20:08:57 +0000";
+lastChange = "2025-04-14 04:46:28 +0000";
 layers = (
 {
-guides = (
-{
-angle = 90;
-pos = (161,250);
-},
-{
-angle = 270;
-pos = (247,250);
-}
-);
 hints = (
 {
 name = _corner.ROUND;
-origin = (0,8);
+origin = (0,7);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
 options = 2;
-origin = (0,7);
+origin = (0,6);
 scale = (-0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,4);
+origin = (0,3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,3);
+origin = (0,2);
 type = Corner;
 },
 {
@@ -2721,26 +2845,26 @@ type = Corner;
 },
 {
 name = _corner.ROUND;
+origin = (0,6);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
 origin = (0,7);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,8);
-scale = (0.3,0.3);
-type = Corner;
-},
-{
-name = _corner.ROUND;
-origin = (0,14);
+origin = (0,12);
 scale = (0.75,0.75);
 type = Corner;
 },
 {
 name = _segment.CUT;
 options = 1;
-origin = (0,16);
+origin = (0,14);
 scale = (-1,1);
 type = Segment;
 }
@@ -2751,7 +2875,6 @@ shapes = (
 closed = 1;
 nodes = (
 (387,0,l),
-(387,185,l),
 (387,385,l),
 (387,530,l),
 (22,530,l),
@@ -2763,7 +2886,6 @@ nodes = (
 (247,299,o),
 (22,356,o),
 (22,185,c),
-(22,175,l),
 (22,0,l),
 (162,0,l),
 (247,0,l)
@@ -2777,8 +2899,7 @@ nodes = (
 (162,195,ls),
 (162,232,o),
 (201,240,o),
-(247,250,c),
-(247,185,l)
+(247,250,c)
 );
 }
 );
@@ -2791,7 +2912,7 @@ unicode = 97;
 },
 {
 glyphname = b;
-lastChange = "2025-04-04 20:16:23 +0000";
+lastChange = "2025-04-10 18:38:34 +0000";
 layers = (
 {
 background = {
@@ -3192,9 +3313,86 @@ unicode = 98;
 },
 {
 glyphname = c;
-lastChange = "2025-03-29 21:58:34 +0000";
+lastChange = "2025-04-14 00:14:17 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (321,277);
+text = "*this height is different. made both same 85 (width of aperture)";
+type = Text;
+width = 156;
+}
+);
+background = {
+hints = (
+{
+name = _corner.ROUND;
+origin = (0,0);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,1);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,2);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,5);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,6);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,7);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,8);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,11);
+type = Corner;
+}
+);
+shapes = (
+{
+closed = 1;
+nodes = (
+(22,530,l),
+(22,0,l),
+(387,0,l),
+(387,181,l),
+(247,181,l),
+(247,100,l),
+(162,100,l),
+(162,430,l),
+(247,430,l),
+(247,341,l),
+(387,341,l),
+(387,530,l)
+);
+}
+);
+};
 hints = (
 {
 name = _corner.ROUND;
@@ -3251,14 +3449,14 @@ nodes = (
 (22,530,l),
 (22,0,l),
 (387,0,l),
-(387,181,l),
-(247,181,l),
+(387,185,l),
+(247,185,l),
 (247,100,l),
 (162,100,l),
 (162,430,l),
 (247,430,l),
-(247,341,l),
-(387,341,l),
+(247,345,l),
+(387,345,l),
 (387,530,l)
 );
 }
@@ -3272,9 +3470,93 @@ unicode = 99;
 },
 {
 glyphname = d;
-lastChange = "2025-04-04 20:13:37 +0000";
+lastChange = "2025-04-14 00:14:46 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (446,-19);
+text = "y is -1";
+type = Text;
+}
+);
+background = {
+hints = (
+{
+name = _segment.CUT;
+origin = (0,3);
+type = Segment;
+},
+{
+name = _corner.ROUND;
+origin = (0,4);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,5);
+type = Corner;
+},
+{
+name = _segment.CUT;
+options = 1;
+origin = (0,7);
+scale = (-1,1);
+type = Segment;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (1,0);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (1,1);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (1,2);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (1,3);
+scale = (-0.3,0.3);
+type = Corner;
+}
+);
+shapes = (
+{
+closed = 1;
+nodes = (
+(387,699,l),
+(247,699,l),
+(247,529,l),
+(162,529,l),
+(22,529,l),
+(22,-1,l),
+(162,-1,l),
+(247,-1,l),
+(387,-1,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(162,99,l),
+(162,429,l),
+(247,429,l),
+(247,99,l)
+);
+}
+);
+};
 guides = (
 {
 angle = 90;
@@ -3336,24 +3618,24 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(387,699,l),
-(247,699,l),
-(247,529,l),
-(162,529,l),
-(22,529,l),
-(22,-1,l),
-(162,-1,l),
-(247,-1,l),
-(387,-1,l)
+(387,700,l),
+(247,700,l),
+(247,530,l),
+(162,530,l),
+(22,530,l),
+(22,0,l),
+(162,0,l),
+(247,0,l),
+(387,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(162,99,l),
-(162,429,l),
-(247,429,l),
-(247,99,l)
+(162,100,l),
+(162,430,l),
+(247,430,l),
+(247,100,l)
 );
 }
 );
@@ -3651,13 +3933,13 @@ unicode = 101;
 },
 {
 glyphname = f;
-lastChange = "2025-04-04 20:27:29 +0000";
+lastChange = "2025-04-14 04:47:03 +0000";
 layers = (
 {
 hints = (
 {
 name = _corner.ROUND;
-origin = (0,5);
+origin = (0,4);
 type = Corner;
 },
 {
@@ -3676,7 +3958,6 @@ nodes = (
 (223,600,l),
 (293,600,l),
 (293,700,l),
-(223,700,l),
 (83,700,l),
 (83,0,l)
 );
@@ -3700,7 +3981,7 @@ unicode = 102;
 },
 {
 glyphname = g;
-lastChange = "2025-04-04 20:58:28 +0000";
+lastChange = "2025-04-14 04:47:32 +0000";
 layers = (
 {
 background = {
@@ -3939,18 +4220,18 @@ hints = (
 {
 name = _segment.CUT;
 options = 1;
-origin = (0,8);
+origin = (0,7);
 scale = (-1,1);
 type = Segment;
 },
 {
 name = _corner.ROUND;
-origin = (0,5);
+origin = (0,4);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,6);
+origin = (0,5);
 type = Corner;
 },
 {
@@ -3981,7 +4262,14 @@ type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,1);
+origin = (0,0);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,9);
+scale = (-0.3,0.3);
 type = Corner;
 },
 {
@@ -3993,29 +4281,22 @@ type = Corner;
 },
 {
 name = _corner.ROUND;
-options = 2;
-origin = (0,11);
-scale = (-0.3,0.3);
+origin = (0,0);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,1);
+origin = (0,0);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,1);
-type = Corner;
-},
-{
-name = _corner.ROUND;
-origin = (0,14);
+origin = (0,13);
 type = Corner;
 },
 {
 name = _segment.CUT;
-origin = (0,4);
+origin = (0,3);
 type = Segment;
 }
 );
@@ -4024,7 +4305,6 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(247,-175,l),
 (387,-175,l),
 (387,530,l),
 (247,530,l),
@@ -4038,8 +4318,7 @@ nodes = (
 (162,-75,l),
 (162,-25,l),
 (22,-25,l),
-(22,-175,l),
-(162,-175,l)
+(22,-175,l)
 );
 },
 {
@@ -4061,7 +4340,7 @@ unicode = 103;
 },
 {
 glyphname = h;
-lastChange = "2025-04-04 20:58:50 +0000";
+lastChange = "2025-04-14 04:47:49 +0000";
 layers = (
 {
 background = {
@@ -4231,9 +4510,23 @@ unicode = 105;
 },
 {
 glyphname = j;
-lastChange = "2025-04-04 20:50:41 +0000";
+lastChange = "2025-04-14 04:47:57 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (68,-212);
+text = "curve 108% up here (asymmetric, like y) might ease transition";
+type = Text;
+},
+{
+pos = (3,-278);
+text = "with this negative kerning on left, jj overlaps (as does ,j with suggested comma)";
+type = Text;
+width = 146;
+}
+);
+background = {
 hints = (
 {
 name = _corner.ROUND;
@@ -4247,7 +4540,6 @@ origin = (0,5);
 type = Corner;
 }
 );
-layerId = m01;
 shapes = (
 {
 closed = 1;
@@ -4257,6 +4549,44 @@ nodes = (
 (-37,-75,l),
 (-37,-175,l),
 (33,-175,l),
+(173,-175,l),
+(173,530,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(173,680,l),
+(33,680,l),
+(33,580,l),
+(173,580,l)
+);
+}
+);
+};
+hints = (
+{
+name = _corner.ROUND;
+origin = (0,1);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,4);
+scale = (1.08,1);
+type = Corner;
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(33,530,l),
+(33,-75,l),
+(-37,-75,l),
+(-37,-175,l),
 (173,-175,l),
 (173,530,l)
 );
@@ -4339,9 +4669,17 @@ unicode = 108;
 },
 {
 glyphname = m;
-lastChange = "2025-04-04 21:04:03 +0000";
+lastChange = "2025-04-14 04:48:14 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (294,609);
+text = "irrational, but suggest shift of left side of 2nd hump over and up slightly, as it has further to go than 1st hump";
+type = Text;
+width = 152;
+}
+);
 background = {
 hints = (
 {
@@ -4619,44 +4957,80 @@ type = Corner;
 {
 name = _corner.ROUND;
 options = 2;
-origin = (0,5);
 scale = (-0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
 options = 2;
-origin = (0,6);
 scale = (-0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,9);
 type = Corner;
 },
 {
 name = _segment.CUT;
 options = 1;
-origin = (1,1);
 scale = (-1,1);
 type = Segment;
 },
 {
 name = _corner.ROUND;
-origin = (1,5);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,6);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,1);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,2);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,5);
+type = Corner;
+},
+{
+name = _segment.CUT;
+options = 1;
+origin = (0,7);
+scale = (-1,1);
+type = Segment;
+},
+{
+name = _corner.ROUND;
+origin = (1,1);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (1,8);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
 origin = (1,9);
+scale = (-0.3,0.3);
 type = Corner;
 }
 );
@@ -4664,32 +5038,32 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(426,530,o),
-(390,493,o),
-(365,461,c),
-(365,373,l),
-(390,373,l),
-(390,430,l),
-(475,430,l),
-(475,0,l),
-(615,0,l),
-(615,530,l),
-(481,530,ls)
-);
-},
-{
-closed = 1;
-nodes = (
-(256,530,l),
-(165,530,l),
-(25,530,l),
-(25,0,l),
 (165,0,l),
 (165,430,l),
 (250,430,l),
 (250,0,l),
 (390,0,l),
-(390,530,l)
+(390,530,l),
+(250,530,l),
+(165,530,l),
+(25,530,l),
+(25,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(615,0,l),
+(615,530,l),
+(475,530,ls),
+(420,530,o),
+(380,493,o),
+(355,461,c),
+(355,373,l),
+(390,373,l),
+(390,430,l),
+(475,430,l),
+(475,0,l)
 );
 }
 );
@@ -4763,9 +5137,9 @@ nodes = (
 (615,530,l),
 (475,530,ls),
 (420,530,o),
-(380,493,o),
-(355,461,c),
-(355,373,l),
+(378,493,o),
+(353,461,c),
+(353,373,l),
 (390,373,l),
 (390,430,l),
 (475,430,l),
@@ -5062,9 +5436,21 @@ unicode = 111;
 },
 {
 glyphname = p;
-lastChange = "2025-04-04 20:15:31 +0000";
+lastChange = "2025-04-14 04:48:57 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (237,-47);
+text = "was down shifted 4";
+type = Text;
+},
+{
+pos = (85,-200);
+text = "tail extended to baseline, +5";
+type = Text;
+}
+);
 hints = (
 {
 name = _segment.CUT;
@@ -5122,22 +5508,22 @@ closed = 1;
 nodes = (
 (25,-175,l),
 (165,-175,l),
-(165,-5,l),
-(250,-5,l),
-(390,-5,l),
-(390,525,l),
-(250,525,l),
-(165,525,l),
-(25,525,l)
+(165,0,l),
+(250,0,l),
+(390,0,l),
+(390,530,l),
+(250,530,l),
+(165,530,l),
+(25,530,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(250,425,l),
-(250,95,l),
-(165,95,l),
-(165,425,l)
+(250,430,l),
+(250,100,l),
+(165,100,l),
+(165,430,l)
 );
 }
 );
@@ -5150,9 +5536,98 @@ unicode = 112;
 },
 {
 glyphname = q;
-lastChange = "2025-04-04 20:16:40 +0000";
+lastChange = "2025-04-14 00:29:47 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (-1,-39);
+text = "was down shifted 4";
+type = Text;
+},
+{
+pos = (311,-199);
+text = "tail extended to baseline, +5";
+type = Text;
+}
+);
+background = {
+hints = (
+{
+name = _segment.CUT;
+origin = (0,1);
+type = Segment;
+},
+{
+name = _corner.ROUND;
+origin = (0,2);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,3);
+type = Corner;
+},
+{
+name = _segment.CUT;
+options = 1;
+origin = (0,5);
+scale = (-1,1);
+type = Segment;
+},
+{
+name = _corner.ROUND;
+origin = (1,0);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (1,1);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (1,2);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (1,3);
+scale = (-0.3,0.3);
+type = Corner;
+}
+);
+shapes = (
+{
+closed = 1;
+nodes = (
+(247,526,l),
+(162,526,l),
+(22,526,l),
+(22,-4,l),
+(162,-4,l),
+(247,-4,l),
+(247,-174,l),
+(387,-174,l),
+(387,526,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(247,96,l),
+(162,96,l),
+(162,426,l),
+(247,426,l)
+);
+}
+);
+};
 hints = (
 {
 name = _segment.CUT;
@@ -5208,24 +5683,24 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(247,526,l),
-(162,526,l),
-(22,526,l),
-(22,-4,l),
-(162,-4,l),
-(247,-4,l),
-(247,-174,l),
-(387,-174,l),
-(387,526,l)
+(247,530,l),
+(162,530,l),
+(22,530,l),
+(22,0,l),
+(162,0,l),
+(247,0,l),
+(247,-170,l),
+(387,-170,l),
+(387,530,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(247,96,l),
-(162,96,l),
-(162,426,l),
-(247,426,l)
+(247,100,l),
+(162,100,l),
+(162,430,l),
+(247,430,l)
 );
 }
 );
@@ -5238,7 +5713,7 @@ unicode = 113;
 },
 {
 glyphname = r;
-lastChange = "2025-03-29 22:06:59 +0000";
+lastChange = "2025-04-14 00:43:04 +0000";
 layers = (
 {
 hints = (
@@ -5295,9 +5770,32 @@ unicode = 114;
 },
 {
 glyphname = s;
-lastChange = "2025-04-04 21:09:19 +0000";
+lastChange = "2025-04-14 01:55:45 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (311,337);
+text = "not horizontal";
+type = Text;
+},
+{
+pos = (108,-52);
+text = "top left curve not matching (100, 108), see S";
+type = Text;
+},
+{
+pos = (124,-100);
+text = "handles on central curve opposite weight of S, (left longer than right), I made equal";
+type = Text;
+},
+{
+pos = (269,225);
+text = "anchor off by 1";
+type = Text;
+}
+);
+background = {
 hints = (
 {
 name = _corner.ROUND;
@@ -5348,7 +5846,6 @@ origin = (0,17);
 type = Corner;
 }
 );
-layerId = m01;
 shapes = (
 {
 closed = 1;
@@ -5376,6 +5873,85 @@ nodes = (
 );
 }
 );
+};
+hints = (
+{
+name = _corner.ROUND;
+origin = (0,2);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,3);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,6);
+scale = (1.08,1.08);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,7);
+scale = (1.08,1.08);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,12);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,13);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,16);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,17);
+type = Corner;
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(156,299,o),
+(157,375,c),
+(157,430,l),
+(242,430,l),
+(242,365,l),
+(382,365,l),
+(382,530,l),
+(17,530,l),
+(17,385,l),
+(17,205,o),
+(242,245,o),
+(242,155,c),
+(242,100,l),
+(157,100,l),
+(157,165,l),
+(17,165,l),
+(17,0,l),
+(382,0,l),
+(382,155,ls),
+(382,335,o)
+);
+}
+);
 width = 399;
 }
 );
@@ -5385,13 +5961,13 @@ unicode = 115;
 },
 {
 glyphname = t;
-lastChange = "2025-04-04 20:27:50 +0000";
+lastChange = "2025-04-14 04:49:14 +0000";
 layers = (
 {
 hints = (
 {
 name = _corner.ROUND;
-origin = (0,4);
+origin = (0,3);
 scale = (0.3,0.3);
 type = Corner;
 },
@@ -5407,7 +5983,6 @@ shapes = (
 closed = 1;
 nodes = (
 (83,0,l),
-(223,0,l),
 (293,0,l),
 (293,100,l),
 (223,100,l),
@@ -5434,9 +6009,16 @@ unicode = 116;
 },
 {
 glyphname = u;
-lastChange = "2025-03-29 22:08:48 +0000";
+lastChange = "2025-04-14 00:41:52 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (144.618,-21.423);
+text = "bottom of u over 2, match n + align aperture";
+type = Text;
+}
+);
 background = {
 hints = (
 {
@@ -5549,7 +6131,7 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(164,0,l),
+(162,0,l),
 (247,0,l),
 (387,0,l),
 (387,530,l),
@@ -5571,7 +6153,7 @@ unicode = 117;
 },
 {
 glyphname = v;
-lastChange = "2025-04-04 20:37:44 +0000";
+lastChange = "2025-04-13 23:08:22 +0000";
 layers = (
 {
 background = {
@@ -5615,7 +6197,7 @@ unicode = 118;
 },
 {
 glyphname = w;
-lastChange = "2025-04-04 20:35:44 +0000";
+lastChange = "2025-04-13 23:08:18 +0000";
 layers = (
 {
 layerId = m01;
@@ -5666,26 +6248,18 @@ unicode = 119;
 },
 {
 glyphname = x;
-lastChange = "2025-03-29 22:09:58 +0000";
+lastChange = "2025-04-14 00:45:04 +0000";
 layers = (
 {
-background = {
-shapes = (
+annotations = (
 {
-closed = 0;
-nodes = (
-(371,0,l)
-);
-},
-{
-closed = 0;
-nodes = (
-(371,530,l)
-);
+pos = (134,-66);
+text = "brought point of inset in 20, as most others taper (see X).";
+type = Text;
+width = 179;
 }
 );
-};
-layerId = m01;
+background = {
 shapes = (
 {
 closed = 1;
@@ -5706,6 +6280,27 @@ nodes = (
 );
 }
 );
+};
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(119,265,l),
+(6,0,l),
+(146,0,l),
+(189,110,l),
+(231,0,l),
+(371,0,l),
+(259,265,l),
+(371,530,l),
+(231,530,l),
+(189,420,l),
+(146,530,l),
+(6,530,l)
+);
+}
+);
 width = 377;
 }
 );
@@ -5715,9 +6310,34 @@ unicode = 120;
 },
 {
 glyphname = y;
-lastChange = "2025-04-04 21:20:28 +0000";
+lastChange = "2025-04-14 04:49:30 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (108.087,-220.291);
+text = "brought tail in line";
+type = Text;
+width = 120;
+}
+);
+background = {
+shapes = (
+{
+closed = 0;
+nodes = (
+(13,530,l)
+);
+},
+{
+closed = 0;
+nodes = (
+(7,-75,l),
+(7,-175,l)
+);
+}
+);
+};
 hints = (
 {
 name = _corner.ROUND;
@@ -5727,7 +6347,7 @@ type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,11);
+origin = (0,10);
 scale = (1.15,0.8);
 type = Corner;
 }
@@ -5737,22 +6357,21 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(284,0,l),
-(399,530,l),
-(259,530,l),
-(209,147,l),
-(159,530,l),
-(19,530,l),
-(134,0,l),
-(150,-75,l),
+(278,0,l),
+(393,530,l),
+(253,530,l),
+(203,147,l),
+(153,530,l),
+(13,530,l),
+(128,0,l),
+(144,-75,l),
 (13,-75,l),
 (13,-175,l),
-(83,-175,l),
-(236,-175,l)
+(230,-175,l)
 );
 }
 );
-width = 405;
+width = 399;
 }
 );
 metricLeft = "=h*.5";
@@ -5791,9 +6410,16 @@ unicode = 122;
 },
 {
 glyphname = zero;
-lastChange = "2025-02-27 21:51:32 +0000";
+lastChange = "2025-04-14 00:45:59 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (113.983,-76.848);
+text = "optional, probably not, but could slash 0 to distinguish from O)";
+type = Text;
+}
+);
 hints = (
 {
 name = _corner.ROUND;
@@ -5872,9 +6498,16 @@ unicode = 48;
 },
 {
 glyphname = one;
-lastChange = "2025-04-04 21:23:42 +0000";
+lastChange = "2025-04-14 00:46:16 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (-37,523);
+text = "distance is 110.3, vs 110. figured bc pixel rounding)";
+type = Text;
+}
+);
 layerId = m01;
 shapes = (
 {
@@ -5905,9 +6538,21 @@ unicode = 49;
 },
 {
 glyphname = two;
-lastChange = "2025-04-04 21:25:47 +0000";
+lastChange = "2025-04-14 01:56:06 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (115.66,190.225);
+text = "handle off by 1";
+type = Text;
+},
+{
+pos = (284.57,480.013);
+text = "handle off by 1";
+type = Text;
+}
+);
 hints = (
 {
 name = _corner.ROUND;
@@ -5939,14 +6584,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(261,349,o),
+(260,349,o),
 (20,321,o),
 (20,130,c),
 (20,0,l),
 (410,0,l),
 (410,130,l),
 (170,130,l),
-(169,250,o),
+(170,250,o),
 (410,271,o),
 (410,425,c),
 (410,700,l),
@@ -5968,84 +6613,84 @@ unicode = 50;
 },
 {
 glyphname = three;
-lastChange = "2025-04-04 21:29:36 +0000";
+lastChange = "2025-04-14 00:48:20 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (93,-67);
+text = "deleted extra node + path";
+type = Text;
+}
+);
 hints = (
 {
 name = _corner.ROUND;
-origin = (1,12);
+origin = (0,11);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
 options = 2;
-origin = (1,11);
+origin = (0,10);
 scale = (-0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,2);
+origin = (0,2);
 scale = (1.08,1.08);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,16);
+origin = (0,15);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
 options = 2;
-origin = (1,15);
+origin = (0,14);
 scale = (-0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,6);
+origin = (0,6);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,1);
+origin = (0,1);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,10);
+origin = (0,9);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,17);
+origin = (0,16);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _segment.DOUBLECUT;
-origin = (1,4);
+origin = (0,4);
 type = Segment;
 },
 {
 name = _corner.ROUND;
-origin = (1,5);
+origin = (0,5);
 type = Corner;
 }
 );
 layerId = m01;
 shapes = (
-{
-closed = 0;
-nodes = (
-(20,200,l),
-(170,200,l)
-);
-},
 {
 closed = 1;
 nodes = (
@@ -6056,7 +6701,6 @@ nodes = (
 (410,425,l),
 (410,700,l),
 (20,700,l),
-(20,546,l),
 (20,500,l),
 (170,500,l),
 (170,590,l),
@@ -6080,7 +6724,7 @@ unicode = 51;
 },
 {
 glyphname = four;
-lastChange = "2025-04-04 21:30:25 +0000";
+lastChange = "2025-04-14 00:48:41 +0000";
 layers = (
 {
 background = {
@@ -6138,9 +6782,20 @@ unicode = 52;
 },
 {
 glyphname = five;
-lastChange = "2025-04-04 21:46:06 +0000";
+lastChange = "2025-04-14 04:49:49 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (127.596,774.815);
+type = Text;
+},
+{
+pos = (88,-72);
+text = "brought top down 5";
+type = Text;
+}
+);
 background = {
 hints = (
 {
@@ -6387,62 +7042,55 @@ nodes = (
 hints = (
 {
 name = _corner.ROUND;
-origin = (1,1);
+origin = (0,1);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,2);
+origin = (0,2);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,3);
+origin = (0,3);
 type = Corner;
 },
 {
 name = _segment.CUT;
 options = 1;
-origin = (1,5);
+origin = (0,5);
 scale = (-1,1);
 type = Segment;
 },
 {
 name = _corner.ROUND;
-origin = (1,12);
+origin = (0,12);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (1,13);
+origin = (0,13);
 scale = (0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
 options = 2;
-origin = (1,14);
+origin = (0,14);
 scale = (-0.3,0.3);
 type = Corner;
 },
 {
 name = _corner.ROUND;
 options = 2;
-origin = (1,15);
+origin = (0,15);
 scale = (-0.3,0.3);
 type = Corner;
 }
 );
 layerId = m01;
 shapes = (
-{
-closed = 0;
-nodes = (
-(20,200,l),
-(170,200,l)
-);
-},
 {
 closed = 1;
 nodes = (
@@ -6475,9 +7123,16 @@ unicode = 53;
 },
 {
 glyphname = six;
-lastChange = "2025-04-04 21:46:29 +0000";
+lastChange = "2025-04-14 00:50:15 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (138,-60);
+text = "brought top down 5";
+type = Text;
+}
+);
 background = {
 hints = (
 {
@@ -6579,6 +7234,63 @@ type = Corner;
 },
 {
 name = _corner.ROUND;
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _segment.CUT;
+scale = (-1,-1);
+type = Segment;
+},
+{
+name = _corner.ROUND;
+type = Corner;
+},
+{
+name = _corner.ROUND;
+type = Corner;
+},
+{
+name = _corner.ROUND;
+type = Corner;
+},
+{
+name = _corner.ROUND;
+type = Corner;
+},
+{
+name = _corner.ROUND;
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
 origin = (0,0);
 scale = (0.3,0.3);
 type = Corner;
@@ -6651,25 +7363,25 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(255,590,l),
+(260,590,l),
 (170,590,l),
-(170,520,l),
-(255,520,l),
-(405,520,l),
-(405,0,l),
+(170,515,l),
+(260,515,l),
+(410,515,l),
+(410,0,l),
 (20,0,l),
 (20,700,l),
-(405,700,l),
-(405,548,l),
-(255,548,l)
+(410,700,l),
+(410,548,l),
+(260,548,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(255,110,l),
-(255,410,l),
-(170,410,l),
+(260,110,l),
+(260,405,l),
+(170,405,l),
 (170,110,l)
 );
 }
@@ -6753,9 +7465,9 @@ closed = 1;
 nodes = (
 (260,590,l),
 (170,590,l),
-(170,515,l),
-(260,515,l),
-(410,515,l),
+(170,510,l),
+(260,510,l),
+(410,510,l),
 (410,0,l),
 (20,0,l),
 (20,700,l),
@@ -6768,8 +7480,8 @@ nodes = (
 closed = 1;
 nodes = (
 (260,110,l),
-(260,405,l),
-(170,405,l),
+(260,400,l),
+(170,400,l),
 (170,110,l)
 );
 }
@@ -6783,9 +7495,17 @@ unicode = 54;
 },
 {
 glyphname = seven;
-lastChange = "2025-02-28 20:40:29 +0000";
+lastChange = "2025-04-14 00:51:44 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (72.397,-77.357);
+text = "all other numbers (except 1) are 390 total width";
+type = Text;
+width = 142;
+}
+);
 layerId = m01;
 shapes = (
 {
@@ -6810,13 +7530,25 @@ unicode = 55;
 },
 {
 glyphname = eight;
-lastChange = "2025-04-04 21:48:25 +0000";
+lastChange = "2025-04-14 04:50:00 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (484,360);
+text = "does not match 8's doublecut (dif height)";
+type = Text;
+},
+{
+pos = (486,395);
+text = "not symmetric";
+type = Text;
+}
+);
 hints = (
 {
 name = _corner.ROUND;
-origin = (0,8);
+origin = (0,7);
 type = Corner;
 },
 {
@@ -6828,16 +7560,6 @@ type = Corner;
 name = _segment.DOUBLECUT;
 origin = (0,2);
 type = Segment;
-},
-{
-name = _corner.ROUND;
-origin = (0,3);
-type = Corner;
-},
-{
-name = _corner.ROUND;
-origin = (0,4);
-type = Corner;
 },
 {
 name = _corner.ROUND;
@@ -6897,8 +7619,18 @@ type = Corner;
 },
 {
 name = _segment.DOUBLECUT;
-origin = (0,7);
+origin = (0,6);
 type = Segment;
+},
+{
+name = _corner.ROUND;
+origin = (0,4);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,3);
+type = Corner;
 }
 );
 layerId = m01;
@@ -6911,7 +7643,6 @@ nodes = (
 (410,445,l),
 (410,700,l),
 (20,700,l),
-(20,546,l),
 (20,445,l),
 (20,255,l),
 (20,0,l)
@@ -6945,9 +7676,116 @@ unicode = 56;
 },
 {
 glyphname = nine;
-lastChange = "2025-04-04 21:47:02 +0000";
+lastChange = "2025-04-14 00:50:54 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (157,-77);
+text = "brought bottom up 5";
+type = Text;
+}
+);
+background = {
+hints = (
+{
+name = _corner.ROUND;
+origin = (0,0);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,1);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _segment.CUT;
+origin = (0,3);
+scale = (-1,-1);
+type = Segment;
+},
+{
+name = _corner.ROUND;
+origin = (0,4);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,5);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,6);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,7);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,8);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (1,0);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (1,1);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (1,2);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (1,3);
+scale = (-0.3,0.3);
+type = Corner;
+}
+);
+shapes = (
+{
+closed = 1;
+nodes = (
+(170,110,l),
+(260,110,l),
+(260,185,l),
+(161,185,l),
+(20,185,l),
+(20,700,l),
+(410,700,l),
+(410,0,l),
+(20,0,l),
+(20,152,l),
+(170,152,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(170,590,l),
+(170,295,l),
+(260,295,l),
+(260,590,l)
+);
+}
+);
+};
 hints = (
 {
 name = _corner.ROUND;
@@ -7026,9 +7864,9 @@ closed = 1;
 nodes = (
 (170,110,l),
 (260,110,l),
-(260,185,l),
-(161,185,l),
-(20,185,l),
+(260,190,l),
+(161,190,l),
+(20,190,l),
 (20,700,l),
 (410,700,l),
 (410,0,l),
@@ -7041,8 +7879,8 @@ nodes = (
 closed = 1;
 nodes = (
 (170,590,l),
-(170,295,l),
-(260,295,l),
+(170,300,l),
+(260,300,l),
 (260,590,l)
 );
 }
@@ -7091,9 +7929,17 @@ unicode = 46;
 },
 {
 glyphname = comma;
-lastChange = "2025-02-28 22:09:40 +0000";
+lastChange = "2025-04-13 22:02:10 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (52,-129);
+text = "proposal for comma";
+type = Text;
+}
+);
+background = {
 hints = (
 {
 name = _corner.ROUND;
@@ -7103,7 +7949,44 @@ type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,5);
+origin = (0,4);
+type = Corner;
+}
+);
+shapes = (
+{
+closed = 1;
+nodes = (
+(5,50,l),
+(5,-40,l),
+(-65,-40,l),
+(-65,-150,l),
+(115,-150,l),
+(115,50,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(115,110,l),
+(5,110,l),
+(5,0,l),
+(115,0,l)
+);
+}
+);
+};
+hints = (
+{
+name = _corner.ROUND;
+origin = (0,3);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,6);
+scale = (0.75,0.75);
 type = Corner;
 }
 );
@@ -7112,26 +7995,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(75,50,l),
-(75,-40,l),
-(5,-40,l),
-(5,-150,l),
-(35,-150,l),
-(185,-150,l),
-(185,50,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(185,110,l),
-(75,110,l),
-(75,0,l),
-(185,0,l)
+(5,110,l),
+(5,0,l),
+(54,0,l),
+(54,-55,l),
+(5,-55,l),
+(5,-110,l),
+(115,-110,l),
+(115,110,l)
 );
 }
 );
-width = 190;
+width = 120;
 }
 );
 metricLeft = "=O*.25";
@@ -7140,9 +8015,16 @@ unicode = 44;
 },
 {
 glyphname = slash;
-lastChange = "2025-04-06 19:09:46 +0000";
+lastChange = "2025-04-14 00:53:03 +0000";
 layers = (
 {
+annotations = (
+{
+pos = (56,-102);
+text = "references have flat bottoms for /";
+type = Text;
+}
+);
 layerId = m01;
 shapes = (
 {
@@ -7236,7 +8118,7 @@ unicode = 8212;
 },
 {
 glyphname = underscore;
-lastChange = "2025-04-06 19:07:31 +0000";
+lastChange = "2025-04-14 00:53:09 +0000";
 layers = (
 {
 layerId = m01;
@@ -7260,7 +8142,7 @@ unicode = 95;
 },
 {
 glyphname = _segment.CUT;
-lastChange = "2025-02-27 19:55:19 +0000";
+lastChange = "2025-04-14 00:55:42 +0000";
 layers = (
 {
 anchors = (
@@ -7273,7 +8155,25 @@ name = start;
 pos = (275,0);
 }
 );
-layerId = m01;
+annotations = (
+{
+pos = (290,15);
+text = "23 x 24";
+type = Text;
+},
+{
+pos = (346,12);
+text = "91 distance instead of 85";
+type = Text;
+width = 130;
+},
+{
+pos = (265,73);
+text = "marked for export ?";
+type = Text;
+}
+);
+background = {
 shapes = (
 {
 closed = 0;
@@ -7286,13 +8186,27 @@ nodes = (
 );
 }
 );
+};
+layerId = m01;
+shapes = (
+{
+closed = 0;
+nodes = (
+(275,0,l),
+(275,40,l),
+(296,16,o),
+(335,0,o),
+(365,0,c)
+);
+}
+);
 width = 600;
 }
 );
 },
 {
 glyphname = _segment.DOUBLECUT;
-lastChange = "2025-04-04 19:54:18 +0000";
+lastChange = "2025-04-14 00:55:47 +0000";
 layers = (
 {
 anchors = (
@@ -7305,6 +8219,29 @@ name = start;
 pos = (198,0);
 }
 );
+annotations = (
+{
+pos = (310,25);
+text = "off by 1 (fixed)";
+type = Text;
+},
+{
+pos = (349,-4);
+text = "off by 1 (fixed)";
+type = Text;
+},
+{
+pos = (349,54);
+text = "\"should be 2 cuts sized up\" but single cut is significantly less steep. believe this is better";
+type = Text;
+width = 133;
+},
+{
+pos = (259,106);
+text = "marked for export ?";
+type = Text;
+}
+);
 layerId = m01;
 shapes = (
 {
@@ -7314,8 +8251,8 @@ nodes = (
 (243,0,o),
 (282,26,o),
 (300,66,c),
-(318,27,o),
-(356,0,o),
+(318,26,o),
+(357,0,o),
 (402,0,cs)
 );
 }
@@ -7327,17 +8264,24 @@ width = 600;
 {
 export = 0;
 glyphname = _corner.ROUND;
-lastChange = "2025-02-27 18:26:57 +0000";
+lastChange = "2025-04-14 00:55:26 +0000";
 layers = (
 {
 anchors = (
 {
 name = left;
-pos = (30,139);
+pos = (30,140);
 },
 {
 name = origin;
 pos = (30,0);
+}
+);
+annotations = (
+{
+pos = (186,16);
+text = "off by 1 in a few spots (fixed)";
+type = Text;
 }
 );
 background = {
@@ -7358,26 +8302,16 @@ shapes = (
 {
 closed = 0;
 nodes = (
-(30,139,l),
-(30,62,o),
-(93,-1,o),
-(170,-1,cs)
+(30,140,l),
+(30,63,o),
+(93,0,o),
+(170,0,c)
 );
 }
 );
 width = 200;
 }
 );
-}
-);
-instances = (
-{
-instanceInterpolations = {
-m01 = 1;
-};
-name = "Bold-Condensed";
-weightClass = 700;
-widthClass = 3;
 }
 );
 metrics = (
@@ -7400,6 +8334,8 @@ type = descender;
 type = "italic angle";
 }
 );
+note = "c:
+distance from tips to aperture is different, 81 and 89";
 unitsPerEm = 1000;
 userData = {
 GSDimensionPlugin.Dimensions = {
