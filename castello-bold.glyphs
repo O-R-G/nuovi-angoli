@@ -1,6 +1,9 @@
 {
 .appVersion = "3343";
 .formatVersion = 3;
+DisplayStrings = (
+"//"
+);
 date = "2025-02-09 20:11:06 +0000";
 familyName = Castello;
 fontMaster = (
@@ -10259,6 +10262,55 @@ metricWidth = space;
 unicode = 160;
 },
 {
+glyphname = .notdef;
+lastChange = "2025-04-17 15:33:44 +0000";
+layers = (
+{
+hints = (
+{
+name = _corner.ROUND;
+origin = (0,0);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,1);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,2);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,3);
+scale = (0.3,0.3);
+type = Corner;
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(25,225,l),
+(325,225,l),
+(325,525,l),
+(25,525,l)
+);
+}
+);
+width = 350;
+}
+);
+metricLeft = "=H";
+metricRight = "=H";
+},
+{
 glyphname = period;
 lastChange = "2025-04-16 21:02:52 +0000";
 layers = (
@@ -12385,6 +12437,17 @@ nodes = (
 width = 600;
 }
 );
+}
+);
+instances = (
+{
+instanceInterpolations = {
+m01 = 1;
+};
+isBold = 1;
+name = "Bold-Condensed";
+weightClass = 700;
+widthClass = 1;
 }
 );
 metrics = (
