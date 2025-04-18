@@ -13618,8 +13618,7 @@ type = descender;
 type = "italic angle";
 }
 );
-note = "c:
-distance from tips to aperture is different, 81 and 89";
+note = "© Dexter Sinister, 2025";
 unitsPerEm = 1000;
 userData = {
 GSDimensionPlugin.Dimensions = {
