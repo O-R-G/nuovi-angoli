@@ -24,16 +24,26 @@
 # Usage:
 #   1. Open a font in Glyphs.app.
 #   2. Open the Macro Panel.
-#   3. Copy-paste this script into the panel and run it.
+
 #   4. Review the output in the Macro Panel's log for detailed validation insights.
 #
 # Note: This script only performs checks and reports on issues without modifying the font data.
+
+
+# RELAXED mode: when True, smartly remove most false positives (and possibly introduce false negatives).
+# For collinear points, tries to avoid when there is a segment between them (e.g. between BC in collinear ABCD)
+# For overlapping points, ignore exact overlaps if they a part of two separate paths which exactly share a bounding path (e.g. E, F, T when not baked)
+# For anchors, ignore loose named anchors (often used by combining)
+# For specific lengths, skip divide and ringcomb, as the rounded distances seem to be calculated differently (and they look good)
+# Also for specific lengths, ignore distances that are fractions of a pixel away, as they are likely caused by diagonal lines being quantized to the grid.
+
+RELAXED = True
 
 font = Glyphs.font
 if font is None:
     print("No font open. Please open a font in Glyphs and try again.")
 else:
-    master = font.selectedFontMaster  # current master to check
+    master = font.selectedFontMaster
     masterID = master.id
 
     # Counters for summary
@@ -44,183 +54,170 @@ else:
     count_open_paths = 0
     count_isolated = 0
 
-    # Store issues for each glyph: a list of strings (each issue description)
     issues_by_glyph = {}
 
-    # Helper function to format coordinates nicely (drop .0 trailing, use int if possible)
     def fmt_coord(x):
-        # Use int if it's effectively an integer
         if abs(x - round(x)) < 0.001:
-            x = int(round(x))
-        else:
-            x = round(x, 2)
-        return x
+            return int(round(x))
+        return round(x, 2)
 
-    # Iterate over all glyphs in font
+    def bboxes_touch(bb1, bb2):
+        if not bb1 or not bb2:
+            return False
+        x1_min, y1_min = bb1.origin.x, bb1.origin.y
+        x1_max = x1_min + bb1.size.width
+        y1_max = y1_min + bb1.size.height
+        x2_min, y2_min = bb2.origin.x, bb2.origin.y
+        x2_max = x2_min + bb2.size.width
+        y2_max = y2_min + bb2.size.height
+        flush_x = (x1_max == x2_min or x2_max == x1_min) or (x1_max == x2_max or x1_min == x2_min)
+        flush_y = (y1_max == y2_min or y2_max == y1_min) or (y1_max == y2_max or y1_min == y2_min)
+        return flush_x or flush_y
+
     for glyph in font.glyphs:
         layer = glyph.layers[masterID]
         glyph_name = glyph.name
-        issues = []  # collect issues for this glyph
+        issues = []
 
-        # Skip glyphs that are non-exporting? (Not specified, so we include all glyphs)
-        # Perform checks:
-
-        # (a) Small segments check
-        for path in layer.paths:
-            for segment in path.segments:  # iterate through segments (line or curve)
-                # Bounding box of segment
-                seg_bounds = segment.bounds
-                seg_w = seg_bounds.size.width
-                seg_h = seg_bounds.size.height
-                if (seg_w >= 1 and seg_w <= 9) or (seg_h >= 1 and seg_h <= 9):
-                    # Coordinates of segment endpoints for reporting
-                    try:
-                        start_pt = segment.firstPoint()
-                        end_pt = segment.lastPoint()
-                    except Exception as e:
-                        start_pt = None
-                        end_pt = None
-                    if start_pt is not None and end_pt is not None:
-                        x1, y1 = fmt_coord(start_pt.x), fmt_coord(start_pt.y)
-                        x2, y2 = fmt_coord(end_pt.x), fmt_coord(end_pt.y)
-                        issues.append(f"Small segment from ({x1}, {y1}) to ({x2}, {y2}) " +
-                                      f"[bbox {seg_w}×{seg_h}]")
-                    else:
-                        issues.append(f"Small segment [bbox {(seg_w)}×{(seg_h)}]")
-                    count_small_segments += 1
-
-        # (b) Specific suspicious segment lengths check
-        target_lengths = [100, 110, 140, 150]
+        # (a) Small segments
         for path in layer.paths:
             for segment in path.segments:
-                seg_length = segment.length()  # geometric length of the segment
-                if seg_length is None:
-                    continue  # in case segment length couldn't be calculated (e.g., degenerate segment)
-                # Check against each target length
-                for target in target_lengths:
-                    diff = abs(seg_length - target)
-                    if 0 < diff <= 3:
-                        # Near a target length but not exactly
-                        # Round the length for reporting
-                        L = round(seg_length, 1)
+                seg_bounds = segment.bounds
+                seg_w, seg_h = seg_bounds.size.width, seg_bounds.size.height
+                if (1 <= seg_w <= 9) or (1 <= seg_h <= 9):
+                    try:
+                        sp = segment.firstPoint(); ep = segment.lastPoint()
+                    except:
+                        sp = ep = None
+                    if sp and ep:
+                        x1, y1 = fmt_coord(sp.x), fmt_coord(sp.y)
+                        x2, y2 = fmt_coord(ep.x), fmt_coord(ep.y)
+                        issues.append(f"Small segment from ({x1}, {y1}) to ({x2}, {y2}) [bbox {seg_w}×{seg_h}]")
+                    else:
+                        issues.append(f"Small segment [bbox {seg_w}×{seg_h}]")
+                    count_small_segments += 1
+
+        # (b) Suspicious lengths
+        targets = [65, 85, 100, 110, 140, 150]
+        for path in layer.paths:
+            for segment in path.segments:
+                L = segment.length()
+                if L is None:
+                    continue
+                for t in targets:
+                    if 1 <= abs(L - t) <= 3:
+                        if RELAXED and abs(L-t) < 1:
+                            continue
+                        if RELAXED and glyph_name.lower() in ["divide", "ringcomb"]: # confusing how it is measuring lengths for these curves. seems fine, but triggers
+                            continue
+                        Lr = round(L, 1)
                         try:
-                            start_pt = segment.firstPoint()
-                            end_pt = segment.lastPoint()
-                        except Exception as e:
-                            start_pt = None
-                            end_pt = None
-                        if start_pt is not None and end_pt is not None:
-                            x1, y1 = fmt_coord(start_pt.x), fmt_coord(start_pt.y)
-                            x2, y2 = fmt_coord(end_pt.x), fmt_coord(end_pt.y)
-                            issues.append(f"Segment at ({x1}, {y1}) length ~{L} (near {target})")
+                            sp, ep = segment.firstPoint(), segment.lastPoint()
+                        except:
+                            sp = ep = None
+                        if sp and ep:
+                            x1, y1 = fmt_coord(sp.x), fmt_coord(sp.y)
+                            x2, y2 = fmt_coord(ep.x), fmt_coord(ep.y)
+                            issues.append(f"Segment at ({x1}, {y1}) length ~{Lr} (near {t})")
                         else:
-                            issues.append(f"Segment length ~{L} (near {target})")
+                            issues.append(f"Segment length ~{Lr} (near {t})")
                         count_suspicious_lengths += 1
-                        # No need to check other target lengths for this segment (avoid duplicate reporting)
                         break
 
-        # (c) Very close nodes check (on-curve nodes only)
-        # Collect all on-curve node coordinates
-        oncurve_points = []
+        # (c) Very close nodes
+        pts = []
         for path in layer.paths:
             for node in path.nodes:
                 if node.type != "offcurve":
-                    oncurve_points.append((node.x, node.y))
-        # Compare each pair (i<j) for distance
-        # We use a simple brute force as number of nodes is usually manageable
-        n_points = len(oncurve_points)
-        for i in range(n_points):
-            (x1, y1) = oncurve_points[i]
-            for j in range(i+1, n_points):
-                (x2, y2) = oncurve_points[j]
-                dx = x2 - x1
-                dy = y2 - y1
-                dist_sq = dx*dx + dy*dy
-                if dist_sq < (9 ** 2):  # distance < 9
-                    dist = (dist_sq ** 0.5)
-                    dist_val = round(dist, 1)
+                    pts.append((node, path))
+        n = len(pts)
+        for i in range(n):
+            n1, p1 = pts[i]
+            x1, y1 = n1.x, n1.y
+            for j in range(i+1, n):
+                n2, p2 = pts[j]
+                x2, y2 = n2.x, n2.y
+                dist_sq = (x2 - x1)**2 + (y2 - y1)**2
+                if dist_sq < 9**2:
+                    if RELAXED and dist_sq == 0 and p1 is not p2 and p1.closed and p2.closed:
+                        if bboxes_touch(p1.bounds, p2.bounds):
+                            continue
+                    d = round(dist_sq**0.5, 1)
                     x1f, y1f = fmt_coord(x1), fmt_coord(y1)
                     x2f, y2f = fmt_coord(x2), fmt_coord(y2)
-                    issues.append(f"Nodes at ({x1f}, {y1f}) and ({x2f}, {y2f}) very close (dist={dist_val})")
+                    issues.append(f"Nodes at ({x1f}, {y1f}) and ({x2f}, {y2f}) very close (dist={d})")
                     count_close_nodes += 1
 
-        # (d) Collinear triple (extra node) check
+        # (d) Collinear triples with segment-component skipping
         for path in layer.paths:
-            # Get list of on-curve nodes in order
-            oncurve_nodes = [node for node in path.nodes if node.type != "offcurve"]
-            m = len(oncurve_nodes)
+            nodes = path.nodes
+            # 1) collect indices of on-curve nodes
+            on_indices = [i for i, n in enumerate(nodes) if n.type != "offcurve"]
+            m = len(on_indices)
             if m < 3:
                 continue
-            # If path is closed, the sequence wraps, so handle circular triples
-            # We'll iterate indices such that we cover triples (i, i+1, i+2) mod m
-            end_index = m if not path.closed else m  # for closed, also consider wrapping triple
-            for i in range(m):
-                if i+2 >= m:
-                    if path.closed:
-                        # wrap around for last triples in closed path
-                        A = oncurve_nodes[i]
-                        B = oncurve_nodes[(i+1) % m]
-                        C = oncurve_nodes[(i+2) % m]
-                    else:
-                        # open path, no wrap beyond end
-                        break
-                else:
-                    A = oncurve_nodes[i]
-                    B = oncurve_nodes[i+1]
-                    C = oncurve_nodes[i+2]
-                # Check if A-B and B-C are both straight line segments (no offcurve between)
-                # In Glyphs, if there were off-curve points, B would still appear in oncurve list, 
-                # but the presence of off-curves doesn’t affect collinearity of on-curves themselves.
-                # So we just check collinearity of coordinates:
-                Ax, Ay = A.x, A.y
-                Bx, By = B.x, B.y
-                Cx, Cy = C.x, C.y
-                # Compute cross product of AB and BC vectors to test collinearity
-                # (A, B, C collinear if (Bx-Ax)*(Cy-By) == (By-Ay)*(Cx-Bx))
-                if abs((Bx - Ax) * (Cy - By) - (By - Ay) * (Cx - Bx)) < 1e-6:
-                    # Found collinear triple
-                    xB, yB = fmt_coord(Bx), fmt_coord(By)
+            total = len(nodes)
+
+            # 2) if RELAXED, find all nodes that are part of a segment component hint
+            skip_nodes = set()
+            if RELAXED:
+                for hint in layer.hints:
+                    # 19 is the TrueType SEGMENT hint type
+                    if hint.type == 19 and hint.name and hint.name.startswith("_segment."):
+                        origin = getattr(hint, "originNode", None)
+                        if origin:
+                            skip_nodes.add(origin)
+                        target = getattr(hint, "targetNode", None)
+                        if target:
+                            skip_nodes.add(target)
+
+            # 3) walk each triple A→B→C (wrap only if path.closed)
+            for j in range(m):
+                if not path.closed and j > m - 3:
+                    break
+
+                iA = on_indices[j]
+                iB = on_indices[(j + 1) % m]
+                iC = on_indices[(j + 2) % m]
+                A, B, C = nodes[iA], nodes[iB], nodes[iC]
+
+                # 4) skip if B or C sits on a segment component
+                if RELAXED and (B in skip_nodes or C in skip_nodes):
+                    continue
+
+                # 5) enforce literal adjacency (pure two-point lines)
+                if iB != (iA + 1) % total or iC != (iB + 1) % total:
+                    continue
+
+                # 6) exact collinearity via cross-product
+                cross = (B.x - A.x) * (C.y - A.y) - (B.y - A.y) * (C.x - A.x)
+                if abs(cross) < 1e-6:
+                    xB, yB = fmt_coord(B.x), fmt_coord(B.y)
                     issues.append(f"Extra node at ({xB}, {yB}) (collinear with neighbors)")
                     count_collinear += 1
-            # End for path
-
-        # (e) Open path check
+                    
+        # (e) Open path endpoints
         for path in layer.paths:
             if not path.closed:
-                num_nodes = len(path.nodes)
-                if num_nodes == 0:
-                    continue  # skip empty path (shouldn't happen)
-                if num_nodes == 1:
-                    # single node path will be handled as isolated node below, skip here
+                cnt = len(path.nodes)
+                if cnt <= 1:
                     continue
-                # Path has 2 or more nodes and is not closed
-                # Identify endpoints (first and last on-curve nodes in the path)
-                # Note: In Glyphs, for an open path, the nodes list starts at one end and ends at the other.
                 first_node = path.nodes[0]
                 last_node = path.nodes[-1]
-                # If last node is offcurve, find last oncurve by going backwards
-                if last_node and last_node.type == "offcurve":
-                    # traverse backwards until oncurve found
-                    for node in reversed(path.nodes):
-                        if node.type != "offcurve":
-                            last_node = node
+                # guard against None
+                if first_node is None or last_node is None:
+                    continue
+                if first_node.type == "offcurve":
+                    for nd in path.nodes:
+                        if nd and nd.type != "offcurve":
+                            first_node = nd
                             break
-                # If first node is offcurve (shouldn't happen in a valid open path structure, open must start with line node as per API docs)
-                if first_node and first_node.type == "offcurve":
-                    for node in path.nodes:
-                        if node.type != "offcurve":
-                            first_node = node
+                if last_node.type == "offcurve":
+                    for nd in reversed(path.nodes):
+                        if nd and nd.type != "offcurve":
+                            last_node = nd
                             break
-                if first_node and abs(first_node.x) > 1e18:
-                    try:
-                        first_node = path.segments[0].firstPoint()
-                    except Exception as e:
-                        first_node = None
-                if last_node and abs(last_node.x) > 1e18:
-                    try:
-                        last_node = path.segments[-1].lastPoint()
-                    except Exception as e:
-                        last_node = None
+                # if still None or offcurve, skip
                 if first_node is None or last_node is None:
                     continue
                 fx, fy = fmt_coord(first_node.x), fmt_coord(first_node.y)
@@ -228,70 +225,71 @@ else:
                 issues.append(f"Open path (endpoints at ({fx}, {fy}) and ({lx}, {ly}))")
                 count_open_paths += 1
 
-        # (f) Isolated single-node path check
+        # (f) Isolated nodes
         for path in layer.paths:
             if len(path.nodes) == 1:
-                node = path.nodes[0]
-                x, y = fmt_coord(node.x), fmt_coord(node.y)
-                issues.append(f"Isolated node at ({x}, {y})")
-                count_isolated += 1
+                nd = path.nodes[0]
+                if nd:
+                    x, y = fmt_coord(nd.x), fmt_coord(nd.y)
+                    issues.append(f"Isolated node at ({x}, {y})")
+                    count_isolated += 1
 
-        # (g) Anchors check
+        # (g) Anchors
         for anchor in layer.anchors:
             ax, ay = fmt_coord(anchor.position.x), fmt_coord(anchor.position.y)
-            aname = anchor.name or "(unnamed)"
-            issues.append(f"Anchor '{aname}' at ({ax}, {ay})")
-            count_isolated += 1  # count anchors as part of isolated points category
+            name = anchor.name or "(unnamed)"
+            skip = [
+                'top','bottom','ogonek','center','topleft','topright',
+                '_top','_bottom','origin','start','end','_center',
+                '_ogonek','_topleft','_topright','left'
+            ]
+            if RELAXED and name in skip:
+                continue
+            issues.append(f"Anchor '{name}' at ({ax}, {ay})")
+            count_isolated += 1
 
-        # If no issues found, mark OK; otherwise store issues
-        if len(issues) == 0:
-            issues_by_glyph[glyph_name] = ["OK"]
-        else:
-            issues_by_glyph[glyph_name] = issues
+        issues_by_glyph[glyph_name] = issues or ["OK"]
 
-    # After scanning all glyphs, print the summary and details:
-
-    # Summary output
-    print('////////////////////////////////////////////////////////////////////////////////')
-    print('////////////////////////////////////////////////////////////////////////////////')
-    print('////////////////////////////////////////////////////////////////////////////////')
+    # Print summary
+    print('////////////////////////////////////////////////////////////////')
+    print('////////////////////////////////////////////////////////////////')
+    print('////////////////////////////////////////////////////////////////')
     print("Summary of Issues:")
     print(f"  Small segments (<=10 units): {count_small_segments}")
-    print(f"  Near specific length segments (~100/110/140/150±3): {count_suspicious_lengths}")
+    print(f"  Near specific length segments (~65/85/100/110/140/150±3): {count_suspicious_lengths}")
     print(f"  Very close nodes (<9 units apart): {count_close_nodes}")
     print(f"  Collinear extra points: {count_collinear}")
     print(f"  Open paths: {count_open_paths}")
-    print(f"  Isolated points or anchors: {count_isolated}")
-    print("")  # blank line
+    print(f"  Isolated points or anchors: {count_isolated}\n")
 
     # Detailed per-glyph report
     for glyph in font.glyphs:
-        glyph_name = glyph.name
-        issues = issues_by_glyph.get(glyph_name, [])
-        if not issues:
-            # In case glyph had no issues, it was marked OK
-            issues = ["OK"]
-        # Print glyph name and its issues
-        if len(issues) == 1 and issues[0] == "OK":
-            print(f"{glyph_name}: OK")
+        name = glyph.name
+        glyph_issues = issues_by_glyph.get(name, ["OK"])
+        if glyph_issues == ["OK"]:
+            print(f"{name}: OK")
         else:
-            print(f"{glyph_name}:")
-            for issue in issues:
+            print(f"{name}:")
+            for issue in glyph_issues:
                 print(f"  - {issue}")
-    print("")  # blank line
+    print("")
 
-    # Group glyphs by drawn outline width
-    width_to_glyphs = {}
+    # Outline width groups
+    width_groups = {}
     for glyph in font.glyphs:
-        layer = glyph.layers[masterID]
-        # Calculate outline (bounding box) width
-        if layer.bounds is None:
-            drawn_width = 0  # no outline
-        else:
-            drawn_width = int(round(layer.bounds.size.width))  # round to nearest integer unit
-        width_to_glyphs.setdefault(drawn_width, []).append(glyph.name)
-    # Sort widths and print groups
+        b = glyph.layers[masterID].bounds
+        w = 0 if b is None else int(round(b.size.width))
+        width_groups.setdefault(w, []).append(glyph.name)
     print("Outline Width Groups (width: glyphs):")
-    for width in sorted(width_to_glyphs.keys()):
-        names = ", ".join(sorted(width_to_glyphs[width]))
-        print(f"  {width}: {names}")
+    for w in sorted(width_groups):
+        print(f"  {w}: {', '.join(sorted(width_groups[w]))}")
+
+    # Outline height groups
+    height_groups = {}
+    for glyph in font.glyphs:
+        b = glyph.layers[masterID].bounds
+        h = 0 if b is None else int(round(b.size.height))
+        height_groups.setdefault(h, []).append(glyph.name)
+    print("Outline Height Groups (height: glyphs):")
+    for h in sorted(height_groups):
+        print(f"  {h}: {', '.join(sorted(height_groups[h]))}")
