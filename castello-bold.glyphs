@@ -12750,6 +12750,178 @@ metricRight = "=o";
 unicode = 39;
 },
 {
+glyphname = at;
+lastChange = "2025-05-12 09:07:29 +0000";
+layers = (
+{
+hints = (
+{
+name = _corner.ROUND;
+origin = (2,1);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (2,2);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (3,0);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (3,3);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (3,1);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (3,2);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (2,3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (2,0);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,6);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,5);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,2);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,1);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (1,1);
+scale = (-0.2,0.2);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (1,0);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,5);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,6);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,11);
+scale = (0.75,0.75);
+type = Corner;
+},
+{
+name = _segment.CUT;
+options = 1;
+origin = (0,13);
+scale = (-1,1);
+type = Segment;
+}
+);
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(575,0,l),
+(575,500,l),
+(210,500,l),
+(210,335,l),
+(350,335,l),
+(350,400,l),
+(435,400,l),
+(435,345,l),
+(435,269,o),
+(210,326,o),
+(210,160,c),
+(210,0,l),
+(350,0,l),
+(435,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(435,100,l),
+(350,100,l),
+(350,170,ls),
+(350,207,o),
+(389,215,o),
+(435,225,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(22,-150,l),
+(762,-150,l),
+(762,650,l),
+(22,650,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(612,-40,l),
+(172,-40,l),
+(172,540,l),
+(612,540,l)
+);
+}
+);
+width = 784;
+}
+);
+metricLeft = "=O";
+metricRight = "=O";
+unicode = 64;
+},
+{
 glyphname = dollar;
 kernLeft = dollar;
 kernRight = dollar;
