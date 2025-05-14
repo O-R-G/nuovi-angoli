@@ -1,5 +1,5 @@
-# castello
+# nuovi angoli
 
 Il futuro nel passato ...
 
-v0.5
+v0.6
