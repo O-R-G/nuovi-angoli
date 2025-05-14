@@ -1,11 +1,8 @@
 {
 .appVersion = "3343";
 .formatVersion = 3;
-DisplayStrings = (
-"@"
-);
 date = "2025-02-09 20:11:06 +0000";
-familyName = Castello;
+familyName = "Nuovo Angoli";
 fontMaster = (
 {
 iconName = Bold_Condensed;
