@@ -2,4 +2,4 @@
 
 Il futuro nel passato ...
 
-v0.6
+v0.7
