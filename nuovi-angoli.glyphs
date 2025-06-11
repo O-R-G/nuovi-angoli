@@ -36,6 +36,7 @@ GSOffsetHorizontal = -25;
 GSOffsetKeepCompatible = 1;
 GSOffsetVertical = -15;
 };
+visible = 1;
 }
 );
 glyphs = (
@@ -43,7 +44,7 @@ glyphs = (
 glyphname = A;
 kernLeft = A;
 kernRight = A;
-lastChange = "2025-05-01 12:56:03 +0000";
+lastChange = "2025-06-11 20:30:12 +0000";
 layers = (
 {
 background = {
@@ -84,12 +85,6 @@ nodes = (
 );
 }
 );
-};
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/ABCDE.png";
-locked = 1;
-pos = (-110,-1549);
-scale = (4.4,4.4);
 };
 layerId = m01;
 shapes = (
@@ -786,7 +781,7 @@ unicode = 199;
 glyphname = D;
 kernLeft = H;
 kernRight = O;
-lastChange = "2025-04-23 15:07:47 +0000";
+lastChange = "2025-06-11 20:30:34 +0000";
 layers = (
 {
 anchors = (
@@ -803,12 +798,6 @@ name = top;
 pos = (224,650);
 }
 );
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/ABCDE.png";
-locked = 1;
-pos = (-1717,-1549);
-scale = (4.4,4.4);
-};
 hints = (
 {
 name = _corner.ROUND;
@@ -893,7 +882,7 @@ unicode = 208;
 glyphname = E;
 kernLeft = H;
 kernRight = E;
-lastChange = "2025-04-27 21:59:33 +0000";
+lastChange = "2025-06-11 20:32:54 +0000";
 layers = (
 {
 anchors = (
@@ -953,12 +942,6 @@ nodes = (
 );
 }
 );
-};
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/ABCDE.png";
-locked = 1;
-pos = (-2249,-1549);
-scale = (4.4,4.4);
 };
 layerId = m01;
 shapes = (
@@ -1152,7 +1135,7 @@ unicode = 70;
 glyphname = G;
 kernLeft = O;
 kernRight = G;
-lastChange = "2025-04-23 15:09:52 +0000";
+lastChange = "2025-06-11 20:32:59 +0000";
 layers = (
 {
 anchors = (
@@ -1165,12 +1148,6 @@ name = top;
 pos = (222,650);
 }
 );
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/FGHIJ.png";
-locked = 1;
-pos = (-562,-1364);
-scale = (4.1,4.1);
-};
 hints = (
 {
 name = _corner.ROUND;
@@ -1254,7 +1231,7 @@ unicode = 71;
 glyphname = H;
 kernLeft = H;
 kernRight = H;
-lastChange = "2025-04-23 15:10:20 +0000";
+lastChange = "2025-06-11 20:33:04 +0000";
 layers = (
 {
 anchors = (
@@ -1306,12 +1283,6 @@ nodes = (
 }
 );
 };
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/FGHIJ.png";
-locked = 1;
-pos = (-1012,-1364);
-scale = (4.1,4.1);
-};
 layerId = m01;
 shapes = (
 {
@@ -1341,7 +1312,7 @@ unicode = 72;
 glyphname = I;
 kernLeft = H;
 kernRight = H;
-lastChange = "2025-05-01 12:58:17 +0000";
+lastChange = "2025-06-11 20:33:08 +0000";
 layers = (
 {
 anchors = (
@@ -1362,12 +1333,6 @@ name = topleft;
 pos = (20,650);
 }
 );
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/FGHIJ.png";
-locked = 1;
-pos = (-1460,-1364);
-scale = (4.1,4.1);
-};
 layerId = m01;
 shapes = (
 {
@@ -1501,7 +1466,7 @@ unicode = 204;
 glyphname = J;
 kernLeft = J;
 kernRight = J;
-lastChange = "2025-04-23 15:12:12 +0000";
+lastChange = "2025-06-11 20:33:38 +0000";
 layers = (
 {
 anchors = (
@@ -1577,12 +1542,6 @@ nodes = (
 }
 );
 };
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/FGHIJ.png";
-locked = 1;
-pos = (-1886,-1364);
-scale = (4.1,4.1);
-};
 hints = (
 {
 name = _corner.ROUND;
@@ -1657,7 +1616,7 @@ width = 439;
 glyphname = K;
 kernLeft = H;
 kernRight = K;
-lastChange = "2025-04-27 22:03:28 +0000";
+lastChange = "2025-06-11 20:33:44 +0000";
 layers = (
 {
 background = {
@@ -1690,12 +1649,6 @@ nodes = (
 );
 }
 );
-};
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/KLMN.png";
-locked = 1;
-pos = (-236,-1449);
-scale = (4.4,4.4);
 };
 layerId = m01;
 shapes = (
@@ -1738,7 +1691,7 @@ unicode = 75;
 glyphname = L;
 kernLeft = H;
 kernRight = L;
-lastChange = "2025-04-23 17:11:17 +0000";
+lastChange = "2025-06-11 20:33:48 +0000";
 layers = (
 {
 background = {
@@ -1762,12 +1715,6 @@ nodes = (
 );
 }
 );
-};
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/KLMN.png";
-locked = 1;
-pos = (-780,-1449);
-scale = (4.4,4.4);
 };
 layerId = m01;
 shapes = (
@@ -2157,7 +2104,7 @@ unicode = 77;
 glyphname = N;
 kernLeft = H;
 kernRight = H;
-lastChange = "2025-04-23 15:13:19 +0000";
+lastChange = "2025-06-11 20:33:56 +0000";
 layers = (
 {
 anchors = (
@@ -2170,11 +2117,6 @@ name = top;
 pos = (253,650);
 }
 );
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/KLMN.png";
-pos = (-1931,-1449);
-scale = (4.4,4.4);
-};
 layerId = m01;
 shapes = (
 {
@@ -2238,7 +2180,7 @@ unicode = 209;
 glyphname = O;
 kernLeft = O;
 kernRight = O;
-lastChange = "2025-04-23 17:17:11 +0000";
+lastChange = "2025-06-11 20:34:02 +0000";
 layers = (
 {
 anchors = (
@@ -2267,12 +2209,6 @@ name = topright;
 pos = (424,650);
 }
 );
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/OPQRS.png";
-locked = 1;
-pos = (-101,-1581);
-scale = (4.6,4.6);
-};
 hints = (
 {
 name = _corner.ROUND;
@@ -2632,7 +2568,7 @@ unicode = 338;
 glyphname = P;
 kernLeft = H;
 kernRight = P;
-lastChange = "2025-04-23 15:16:18 +0000";
+lastChange = "2025-06-11 20:34:06 +0000";
 layers = (
 {
 anchors = (
@@ -2645,11 +2581,6 @@ name = top;
 pos = (221,650);
 }
 );
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/OPQRS.png";
-pos = (-650,-1571);
-scale = (4.6,4.6);
-};
 hints = (
 {
 name = _corner.ROUND;
@@ -2792,7 +2723,7 @@ unicode = 222;
 glyphname = Q;
 kernLeft = O;
 kernRight = Q;
-lastChange = "2025-04-25 15:57:02 +0000";
+lastChange = "2025-06-11 20:34:10 +0000";
 layers = (
 {
 anchors = (
@@ -2805,11 +2736,6 @@ name = top;
 pos = (233,650);
 }
 );
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/OPQRS.png";
-pos = (-1193,-1571);
-scale = (4.6,4.6);
-};
 hints = (
 {
 name = _corner.ROUND;
@@ -2899,7 +2825,7 @@ unicode = 81;
 glyphname = R;
 kernLeft = H;
 kernRight = R;
-lastChange = "2025-04-23 15:16:11 +0000";
+lastChange = "2025-06-11 20:34:14 +0000";
 layers = (
 {
 anchors = (
@@ -3000,12 +2926,6 @@ nodes = (
 }
 );
 };
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/OPQRS.png";
-locked = 1;
-pos = (-1710,-1561);
-scale = (4.6,4.6);
-};
 hints = (
 {
 name = _corner.ROUND;
@@ -3083,7 +3003,7 @@ unicode = 82;
 glyphname = S;
 kernLeft = S;
 kernRight = S;
-lastChange = "2025-04-23 17:58:15 +0000";
+lastChange = "2025-06-11 20:34:21 +0000";
 layers = (
 {
 anchors = (
@@ -3375,19 +3295,7 @@ nodes = (
 }
 );
 };
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/OPQRS.png";
-locked = 1;
-pos = (-2243,-1547);
-scale = (4.6,4.6);
-};
 hints = (
-{
-name = _corner.ROUND;
-origin = (0,6);
-scale = (1.08,1.08);
-type = Corner;
-},
 {
 name = _corner.ROUND;
 origin = (0,7);
@@ -3396,39 +3304,45 @@ type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,2);
-scale = (0.3,0.3);
-type = Corner;
-},
-{
-name = _corner.ROUND;
-options = 2;
-origin = (0,3);
-scale = (-0.3,0.3);
-type = Corner;
-},
-{
-name = _corner.ROUND;
-origin = (0,13);
-scale = (0.3,0.3);
-type = Corner;
-},
-{
-name = _corner.ROUND;
-options = 2;
-origin = (0,12);
-scale = (-0.3,0.3);
-type = Corner;
-},
-{
-name = _corner.ROUND;
-origin = (0,17);
+origin = (0,8);
 scale = (1.08,1.08);
 type = Corner;
 },
 {
 name = _corner.ROUND;
-origin = (0,16);
+origin = (0,3);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,4);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,14);
+scale = (0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+options = 2;
+origin = (0,13);
+scale = (-0.3,0.3);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,18);
+scale = (1.08,1.08);
+type = Corner;
+},
+{
+name = _corner.ROUND;
+origin = (0,17);
 scale = (1.08,1.08);
 type = Corner;
 }
@@ -3438,6 +3352,7 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(421,349,o),
 (171,385,o),
 (172,475,c),
 (172,540,l),
@@ -3456,8 +3371,7 @@ nodes = (
 (22,205,l),
 (22,0,l),
 (422,0,l),
-(422,175,l),
-(421,349,o)
+(422,175,l)
 );
 }
 );
@@ -3665,7 +3579,7 @@ unicode = 84;
 glyphname = U;
 kernLeft = U;
 kernRight = U;
-lastChange = "2025-04-23 15:18:40 +0000";
+lastChange = "2025-06-11 20:34:29 +0000";
 layers = (
 {
 anchors = (
@@ -3686,11 +3600,6 @@ name = topright;
 pos = (424,650);
 }
 );
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/TUVW.png";
-pos = (-550,-1342);
-scale = (4.15,4.15);
-};
 hints = (
 {
 name = _corner.ROUND;
@@ -3891,7 +3800,7 @@ unicode = 86;
 glyphname = W;
 kernLeft = W;
 kernRight = W;
-lastChange = "2025-04-23 17:33:31 +0000";
+lastChange = "2025-06-11 20:34:33 +0000";
 layers = (
 {
 anchors = (
@@ -3943,11 +3852,6 @@ nodes = (
 );
 }
 );
-};
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/TUVW.png";
-pos = (-1614,-1342);
-scale = (4.15,4.15);
 };
 layerId = m01;
 shapes = (
@@ -4069,7 +3973,7 @@ unicode = 7808;
 glyphname = X;
 kernLeft = X;
 kernRight = X;
-lastChange = "2025-04-23 15:19:57 +0000";
+lastChange = "2025-06-11 20:34:36 +0000";
 layers = (
 {
 anchors = (
@@ -4103,11 +4007,6 @@ nodes = (
 );
 }
 );
-};
-backgroundImage = {
-imagePath = "../../../projects/o-r-g/castello/castello/png/XYZ.png";
-pos = (-558,-1455);
-scale = (4.4,4.4);
 };
 layerId = m01;
 shapes = (
@@ -14438,7 +14337,7 @@ type = "italic angle";
 }
 );
 note = "© Dexter Sinister, 2025";
-unitsPerEm = 1000;
+unitsPerEm = 900;
 userData = {
 GSDimensionPlugin.Dimensions = {
 m01 = {
