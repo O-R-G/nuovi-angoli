@@ -98,7 +98,8 @@ else:
                     count_small_segments += 1
 
         # (b) Suspicious lengths
-        targets = [65, 85, 100, 110, 140, 150]
+        # targets = [65, 85, 100, 110, 140, 150] # for bold masters
+        targets = [50, 60, 70, 500, 365, 440, 245, 650] # for roman masters
         for path in layer.paths:
             for segment in path.segments:
                 L = segment.length()
