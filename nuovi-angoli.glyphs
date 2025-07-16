@@ -1,9 +1,6 @@
 {
 .appVersion = "3343";
 .formatVersion = 3;
-DisplayStrings = (
-"aufkauf aufhalt aufbleib"
-);
 axes = (
 {
 name = Weight;
@@ -19509,7 +19506,7 @@ unicode = 57;
 glyphname = space;
 kernLeft = space;
 kernRight = space;
-lastChange = "2025-07-16 18:46:23 +0000";
+lastChange = "2025-07-16 21:24:22 +0000";
 layers = (
 {
 layerId = m01;
@@ -19517,7 +19514,7 @@ width = 175;
 },
 {
 layerId = m002;
-width = 165;
+width = 175;
 }
 );
 unicode = 32;
@@ -19526,7 +19523,7 @@ unicode = 32;
 glyphname = nbspace;
 kernLeft = nbspace;
 kernRight = nbspace;
-lastChange = "2025-07-16 20:16:09 +0000";
+lastChange = "2025-07-16 21:25:04 +0000";
 layers = (
 {
 layerId = m01;
@@ -19534,7 +19531,7 @@ width = 175;
 },
 {
 layerId = m002;
-width = 165;
+width = 175;
 }
 );
 metricWidth = space;
@@ -23900,6 +23897,16 @@ instanceInterpolations = {
 m002 = 1;
 };
 name = Regular;
+},
+{
+axesValues = (
+80
+);
+instanceInterpolations = {
+m002 = 0.875;
+m01 = 0.125;
+};
+name = Book;
 },
 {
 axesValues = (
