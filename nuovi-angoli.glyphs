@@ -1,6 +1,10 @@
 {
 .appVersion = "3343";
 .formatVersion = 3;
+DisplayStrings = (
+"Courtesy Attenzione Cafféteria  prego pronto",
+D
+);
 axes = (
 {
 name = Weight;
@@ -15606,7 +15610,7 @@ unicode = 223;
 glyphname = t;
 kernLeft = t;
 kernRight = t;
-lastChange = "2025-09-26 14:13:22 +0000";
+lastChange = "2025-09-26 14:36:41 +0000";
 layers = (
 {
 anchors = (
@@ -15762,7 +15766,7 @@ nodes = (
 );
 }
 );
-width = 300;
+width = 290;
 }
 );
 metricLeft = "=h*.5";
@@ -23565,7 +23569,7 @@ export = 0;
 glyphname = _corner.ROUND;
 kernLeft = _corner.ROUND;
 kernRight = _corner.ROUND;
-lastChange = "2025-06-12 18:14:22 +0000";
+lastChange = "2025-09-26 14:44:56 +0000";
 layers = (
 {
 anchors = (
