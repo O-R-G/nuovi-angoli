@@ -24491,7 +24491,8 @@ type = descender;
 type = "italic angle";
 }
 );
-note = "© Dexter Sinister, 2025";
+note = "© Dexter Sinister, 2025
+";
 unitsPerEm = 900;
 userData = {
 GSDimensionPlugin.Dimensions = {
