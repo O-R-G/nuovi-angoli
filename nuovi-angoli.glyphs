@@ -1,9 +1,6 @@
 {
 .appVersion = "3343";
 .formatVersion = 3;
-DisplayStrings = (
-W
-);
 axes = (
 {
 name = Weight;
@@ -6998,7 +6995,7 @@ unicode = 90;
 glyphname = a;
 kernLeft = a;
 kernRight = n;
-lastChange = "2025-09-26 21:12:56 +0000";
+lastChange = "2025-09-29 00:23:23 +0000";
 layers = (
 {
 anchors = (
@@ -10199,7 +10196,7 @@ unicode = 102;
 glyphname = g;
 kernLeft = g;
 kernRight = g;
-lastChange = "2025-09-27 21:31:26 +0000";
+lastChange = "2025-09-29 00:23:05 +0000";
 layers = (
 {
 anchors = (
@@ -23933,7 +23930,6 @@ widthClass = 6;
 axesValues = (
 70
 );
-exports = 0;
 instanceInterpolations = {
 m002 = 1;
 };
@@ -23984,7 +23980,6 @@ widthClass = 3;
 axesValues = (
 150
 );
-exports = 0;
 instanceInterpolations = {
 m01 = 1;
 };
