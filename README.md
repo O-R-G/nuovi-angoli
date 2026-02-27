@@ -1,5 +1,7 @@
 # nuovi angoli
 
-Il futuro nel passato ...
+Inclinando verso il futuro . . .
 
-v0.9.3
+(ora con italici)
+
+v0.9.5
