@@ -19903,11 +19903,11 @@ unicode = 57;
 glyphname = space;
 kernLeft = space;
 kernRight = space;
-lastChange = "2026-02-27 15:09:33 +0000";
+lastChange = "2026-03-01 21:27:05 +0000";
 layers = (
 {
 layerId = m01;
-width = 175;
+width = 225;
 },
 {
 layerId = m002;
@@ -19920,15 +19920,15 @@ unicode = 32;
 glyphname = nbspace;
 kernLeft = nbspace;
 kernRight = nbspace;
-lastChange = "2025-09-26 20:37:22 +0000";
+lastChange = "2026-03-01 21:27:19 +0000";
 layers = (
 {
 layerId = m01;
-width = 175;
+width = 225;
 },
 {
 layerId = m002;
-width = 225;
+width = 175;
 }
 );
 metricWidth = space;
@@ -24383,11 +24383,11 @@ weightClass = 500;
 },
 {
 axesValues = (
-100
+110
 );
 instanceInterpolations = {
-m002 = 0.625;
-m01 = 0.375;
+m002 = 0.5;
+m01 = 0.5;
 };
 name = Medium;
 visible = 0;
@@ -24396,11 +24396,11 @@ widthClass = 4;
 },
 {
 axesValues = (
-120
+130
 );
 instanceInterpolations = {
-m002 = 0.375;
-m01 = 0.625;
+m002 = 0.25;
+m01 = 0.75;
 };
 isBold = 1;
 name = Bold;
