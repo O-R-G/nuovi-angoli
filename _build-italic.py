@@ -24,7 +24,7 @@ if panel.runModal() != 1:
 else:
 
     folderPath = panel.URL().path()
-    files = [f for f in os.listdir(folderPath) if f.endswith(".ttf")]
+    files = [f for f in os.listdir(folderPath) if f.endswith(".ttf") and "Italic" not in f]
 
     for fileName in files:
 
@@ -38,8 +38,8 @@ else:
         # 1. set italic angle
         # -----------------------------------------
 
-        master.italicAngle = 6
-        skew = math.tan(math.radians(6))
+        master.italicAngle = 8
+        skew = math.tan(math.radians(master.italicAngle))
         originY = master.xHeight / 2.0
 
         # -----------------------------------------
@@ -48,11 +48,17 @@ else:
 
         font.disableUpdateInterface()
 
+        # avoid double skew for composite glyphs
         for glyph in font.glyphs:
             layer = glyph.layers[master.id]
-            layer.applyTransform((1, 0, 0, 1, 0, -originY))
-            layer.applyTransform((1, 0, skew, 1, 0, 0))
-            layer.applyTransform((1, 0, 0, 1, 0, originY))
+            if not layer:
+                continue
+            if layer.components and not layer.paths:
+                continue
+            if layer.paths:
+                layer.applyTransform((1, 0, 0, 1, 0, -originY))
+                layer.applyTransform((1, 0, skew, 1, 0, 0))
+                layer.applyTransform((1, 0, 0, 1, 0, originY))
 
         font.enableUpdateInterface()
 
