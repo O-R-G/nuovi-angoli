@@ -63,6 +63,49 @@ else:
         font.enableUpdateInterface()
 
         # -----------------------------------------
+        # 3. loosen spacing 5%
+        # -----------------------------------------
+
+        spacingFactor = 1.05
+
+        # remove metrics keys so Glyphs does not recompute spacing
+        for glyph in font.glyphs:
+            glyph.leftMetricsKey = None
+            glyph.rightMetricsKey = None
+            glyph.widthMetricsKey = None
+
+        # expand sidebearings
+        for glyph in font.glyphs:
+            layer = glyph.layers[master.id]
+            if not layer:
+                continue
+
+            # skip pure component glyphs
+            if layer.components and not layer.paths:
+                continue
+
+            # keep space width unchanged
+            if glyph.name == "space":
+                continue
+
+            layer.LSB *= spacingFactor
+            layer.RSB *= spacingFactor
+
+            # expand kerning
+            kerning = font.kerning.get(master.id)
+
+            if kerning:
+                for left in kerning:
+                    rights = kerning[left]
+                    if not rights:
+                        continue
+                    for right in rights:
+                        value = rights[right]
+                        if value is None:
+                            continue
+                        rights[right] = value * spacingFactor
+
+        # -----------------------------------------
         # 3. adjust naming
         # -----------------------------------------
 
