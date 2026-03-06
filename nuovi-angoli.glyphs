@@ -24709,11 +24709,11 @@ weightClass = 500;
 },
 {
 axesValues = (
-110
+100
 );
 instanceInterpolations = {
-m002 = 0.5;
-m01 = 0.5;
+m002 = 0.625;
+m01 = 0.375;
 };
 name = Medium;
 visible = 0;
