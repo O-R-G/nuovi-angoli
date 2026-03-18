@@ -25312,6 +25312,370 @@ metricRight = "=O";
 unicode = 8240;
 },
 {
+glyphname = upArrow;
+lastChange = "2026-03-18 19:46:13 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+angle = 90;
+pos = (650,-96);
+ref = rightArrow;
+}
+);
+width = 652;
+},
+{
+layerId = m002;
+shapes = (
+{
+angle = 90;
+pos = (678,-96);
+ref = rightArrow;
+}
+);
+width = 708;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8593;
+},
+{
+glyphname = northEastArrow;
+lastChange = "2026-03-18 19:48:09 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+angle = 45;
+pos = (274,-202);
+ref = rightArrow;
+}
+);
+width = 635;
+},
+{
+layerId = m002;
+shapes = (
+{
+angle = 45;
+pos = (265,-202);
+ref = rightArrow;
+}
+);
+width = 645;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8599;
+},
+{
+glyphname = rightArrow;
+lastChange = "2026-03-18 19:42:30 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(803,324,l),
+(499,628,l),
+(421,550,l),
+(725,246,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(702,269,l),
+(702,379,l),
+(22,379,l),
+(22,269,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(803,324,l),
+(725,402,l),
+(421,98,l),
+(499,20,l)
+);
+}
+);
+width = 825;
+},
+{
+layerId = m002;
+shapes = (
+{
+closed = 1;
+nodes = (
+(791,324,l),
+(487,628,l),
+(444,585,l),
+(748,281,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(730,294,l),
+(730,354,l),
+(50,354,l),
+(50,294,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(791,324,l),
+(748,367,l),
+(444,63,l),
+(487,20,l)
+);
+}
+);
+width = 841;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8594;
+},
+{
+glyphname = southEastArrow;
+lastChange = "2026-03-18 19:49:11 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+angle = -45;
+pos = (-184,382);
+ref = rightArrow;
+}
+);
+width = 635;
+},
+{
+layerId = m002;
+shapes = (
+{
+angle = -45;
+pos = (-193,382);
+ref = rightArrow;
+}
+);
+width = 645;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8600;
+},
+{
+glyphname = downArrow;
+lastChange = "2026-03-18 19:47:18 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+angle = -91;
+pos = (11,735);
+ref = rightArrow;
+}
+);
+width = 652;
+},
+{
+layerId = m002;
+shapes = (
+{
+angle = -90;
+pos = (30,745);
+ref = rightArrow;
+}
+);
+width = 708;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8595;
+},
+{
+glyphname = southWestArrow;
+lastChange = "2026-03-18 19:49:49 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+angle = -135;
+pos = (361,844);
+ref = rightArrow;
+}
+);
+width = 635;
+},
+{
+layerId = m002;
+shapes = (
+{
+angle = -135;
+pos = (380,844);
+ref = rightArrow;
+}
+);
+width = 645;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8601;
+},
+{
+glyphname = leftArrow;
+lastChange = "2026-03-18 19:43:28 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+pos = (825,0);
+ref = rightArrow;
+scale = (-1,1);
+}
+);
+width = 825;
+},
+{
+layerId = m002;
+shapes = (
+{
+pos = (841,0);
+ref = rightArrow;
+scale = (-1,1);
+}
+);
+width = 841;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8592;
+},
+{
+glyphname = northWestArrow;
+lastChange = "2026-03-18 19:50:10 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+angle = 135;
+pos = (819,260);
+ref = rightArrow;
+}
+);
+width = 635;
+},
+{
+layerId = m002;
+shapes = (
+{
+angle = 135;
+pos = (838,260);
+ref = rightArrow;
+}
+);
+width = 645;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8598;
+},
+{
+glyphname = leftRightArrow;
+lastChange = "2026-03-18 19:45:04 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+pos = (300,0);
+ref = rightArrow;
+},
+{
+ref = leftArrow;
+}
+);
+width = 1125;
+},
+{
+layerId = m002;
+shapes = (
+{
+pos = (300,0);
+ref = rightArrow;
+},
+{
+ref = leftArrow;
+}
+);
+width = 1141;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8596;
+},
+{
+glyphname = upDownArrow;
+lastChange = "2026-03-18 19:51:29 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+pos = (0,80);
+ref = upArrow;
+},
+{
+pos = (0,-80);
+ref = downArrow;
+}
+);
+width = 652;
+},
+{
+layerId = m002;
+shapes = (
+{
+pos = (0,80);
+ref = upArrow;
+},
+{
+pos = (0,-80);
+ref = downArrow;
+}
+);
+width = 708;
+}
+);
+metricLeft = "=o";
+metricRight = "=o";
+unicode = 8597;
+},
+{
 glyphname = dieresiscomb;
 kernLeft = dieresiscomb;
 kernRight = dieresiscomb;
